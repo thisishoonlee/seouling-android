@@ -1,0 +1,78 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar">
+        <item name="android:textColorPrimary">@color/white</item>
+        <item name="android:textColorSecondary">@color/white</item>
+    </style>
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light">
+        <item name="android:colorBackground">@color/colorPrimary</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="Base.TextAppearance.Widget.Base.Toolbar.Title" parent="TextAppearance.Widget.AppCompat.Toolbar.Title">
+        <item name="android:textSize">18sp</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textStyle">normal</item>
+    </style>
+
+    <style name="TextAppearance.Widget.Base.Toolbar.Title" parent="Base.TextAppearance.Widget.Base.Toolbar.Title" />
+
+    <style name="BaseProject" parent="Base" />
+
+    <style name="Base" parent="Theme.AppCompat.Light.NoActionBar">
+        <!--<item name="android:popupMenuStyle">@style/VinglePopupMenu</item>-->
+        <!--<item name="popupMenuStyle">@style/VinglePopupMenu</item>-->
+        <!--<item name="listPopupWindowStyle">@style/VingleListPopupWindow</item>-->
+
+        <!--<item name="android:listPopupWindowStyle">@style/VingleListPopupWindow</item>-->
+        <item name="android:windowBackground">@android:color/white</item>
+        <item name="android:background">@null</item>
+        <!--<item name="android:dropDownListViewStyle">@style/VingleSpinner</item>-->
+
+        <!--<item name="actionBarTabStyle">@style/ActionBarTabStyle.Mallang</item>-->
+        <!--<item name="android:actionBarTabStyle">@style/ActionBarTabStyle.Vingle</item>-->
+        <!--<item name="android:actionOverflowButtonStyle">@style/VingleActionBar.Overflow</item>-->
+        <!--<item name="actionOverflowButtonStyle">@style/VingleActionBar.Overflow</item>-->
+        <!--<item name="android:actionDropDownStyle">@style/VingleActionBar.DropDown</item>-->
+        <!--<item name="actionDropDownStyle">@style/VingleActionBar.DropDown</item>-->
+        <!--<item name="actionButtonStyle">@style/Widget.Vingle.ActionButton</item>-->
+        <!--<item name="android:actionBarDivider">@drawable/grey_cc</item>-->
+        <!--<item name="actionBarDivider">@drawable/grey_cc</item>-->
+        <!--<item name="userNameTextViewStyle">@style/Widget.Vingle.UserNameTextView</item>-->
+        <!--<item name="loadingViewStyle">@style/Widget.Vingle.LoadingView</item>-->
+
+        <!--&lt;!&ndash;<item name="actionBarWidgetTheme">@style/VingleActionBarWidgetTheme</item>&ndash;&gt;-->
+        <!--<item name="windowActionBar">false</item>-->
+        <!--<item name="windowNoTitle">true</item>-->
+
+        <!--<item name="colorPrimary">@color/primary_color</item>-->
+        <!--<item name="colorPrimaryDark">@color/primary_color_dark</item>-->
+        <!--<item name="colorAccent">@color/accent_color</item>-->
+
+        <!--<item name="actionModeBackground">@color/action_mode_background</item>-->
+        <!--<item name="windowActionModeOverlay">true</item>-->
+        <!--<item name="android:windowContentOverlay">@null</item>-->
+        <!--<item name="searchViewStyle">@style/Widget.Vingle.SearchView</item>-->
+        <!--<item name="popularSectionButtonStyle">@style/Widget.Vingle.PopularSectionButton</item>-->
+
+        <!--<item name="actionMenuTextAppearance">@style/TextAppearance.Widget.Vingle.Toolbar.Menu</item>-->
+        <!--<item name="toolbarStyle">@style/Widget.Vingle.Toolbar</item>-->
+        <!--<item name="toolbarNavigationButtonStyle">@style/Widget.Vingle.Toolbar.Button.Navigation</item>-->
+
+        <!--<item name="android:progressBarStyle">@style/Widget.Vingle.ProgressBar</item>-->
+        <!--<item name="pagingGuideViewStyle">@style/Widget.Vingle.PagingGuideView</item>-->
+        <!--<item name="closableGuideViewStyle">@style/Widget.Vingle.ClosableGuideView</item>-->
+
+        <!--<item name="android:colorEdgeEffect">@color/grey140</item>-->
+    </style>
+
+    <style name="BasePopupMenu" parent="Widget.AppCompat.PopupMenu" />
+
+</resources>

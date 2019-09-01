@@ -1,0 +1,26 @@
+apply plugin: 'com.android.library'
+apply plugin: 'kotlin-android'
+
+android {
+    compileSdkVersion versions.target_sdk
+
+    defaultConfig {
+        minSdkVersion versions.min_sdk
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+}
+
+dependencies {
+    api project(":base")
+
+    api "io.reactivex.rxjava2:rxandroid:${versions.rx.android}"
+
+    api 'androidx.core:core-ktx:1.0.1'
+    implementation "androidx.annotation:annotation:${versions.android_support}"
+    implementation "androidx.exifinterface:exifinterface:${versions.android_support}"
+    implementation "androidx.legacy:legacy-support-v4:${versions.android_support}"
+}

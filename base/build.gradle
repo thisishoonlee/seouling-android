@@ -1,0 +1,7 @@
+apply plugin: 'kotlin'
+
+dependencies {
+    api "org.jetbrains.kotlin:kotlin-stdlib:${versions.kotlin}"
+    api "io.reactivex.rxjava2:rxjava:${versions.rx.java}"
+    api "io.reactivex.rxjava2:rxkotlin:${versions.rx.kotlin}"
+}
