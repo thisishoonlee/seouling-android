@@ -1,1 +1,1 @@
-include ':app', ':custom-view', ':base', ':base-android', ':design', ':imaging'
+include ':seouling', ':custom-view', ':base', ':base-android', ':design', ':imaging'
