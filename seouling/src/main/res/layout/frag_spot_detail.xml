@@ -1,0 +1,270 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent">
+
+  <androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <mobile.seouling.com.widget.BaseToolbar
+      android:id="@+id/toolbar"
+      android:layout_width="match_parent"
+      android:layout_height="?attr/actionBarSize"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="parent"
+      tools:title="남산타워" />
+
+    <ImageView
+      android:id="@+id/spotImage"
+      android:layout_width="match_parent"
+      android:layout_height="320dp"
+      android:scaleType="centerCrop"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@id/toolbar"
+      tools:src="@drawable/box_place_1" />
+
+    <TextView
+      android:id="@+id/spotDescription"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginStart="25dp"
+      android:layout_marginTop="16dp"
+      android:textColor="@color/black"
+      android:textSize="14sp"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@id/spotImage"
+      tools:text="남산 타워 입니다." />
+
+    <androidx.recyclerview.widget.RecyclerView
+      android:id="@+id/tagRecycler"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginStart="20dp"
+      android:layout_marginTop="15dp"
+      android:orientation="horizontal"
+      app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@id/spotDescription"
+      tools:listitem="@layout/item_spot_detail_tag" />
+
+    <LinearLayout
+      android:id="@+id/spotEngage"
+      android:layout_width="0dp"
+      android:layout_height="match_parent"
+      android:layout_marginTop="30dp"
+      android:gravity="center_vertical"
+      android:orientation="horizontal"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="@id/spotDescription"
+      app:layout_constraintTop_toBottomOf="@id/tagRecycler">
+
+      <CheckedTextView
+        android:layout_width="15dp"
+        android:layout_height="15dp"
+        android:background="@drawable/ic_heart"
+        tools:checked="true" />
+
+      <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="7dp"
+        android:text="@string/good"
+        android:textColor="@color/tag_text"
+        android:textSize="12sp" />
+
+      <TextView
+        android:id="@+id/likeCount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:textColor="@color/tag_text"
+        android:textSize="12sp"
+        tools:text="14" />
+
+      <CheckedTextView
+        android:layout_width="15dp"
+        android:layout_height="15dp"
+        android:layout_marginStart="30dp"
+        android:background="@drawable/ic_my_seoul"
+        tools:checked="false" />
+
+      <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="7dp"
+        android:text="@string/my_seoul"
+        android:textColor="@color/tag_text"
+        android:textSize="12sp" />
+
+      <TextView
+        android:id="@+id/mySeoulCount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:textColor="@color/tag_text"
+        android:textSize="12sp"
+        tools:text="13" />
+
+    </LinearLayout>
+
+    <View
+      android:id="@+id/engageDivider"
+      android:layout_width="0dp"
+      android:layout_height="1dp"
+      android:layout_marginEnd="10dp"
+      android:layout_marginStart="10dp"
+      android:layout_marginTop="30dp"
+      android:background="#e4e4e4"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@id/spotEngage" />
+
+    <TextView
+      android:id="@+id/spotAddress"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginStart="25dp"
+      android:layout_marginTop="20dp"
+      android:drawablePadding="13dp"
+      android:drawableStart="@drawable/ic_address"
+      android:textColor="@color/black"
+      android:textSize="12sp"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="@id/engageDivider"
+      tools:text="서울 용산구 남산공원길 103 서울타워우편물취급소" />
+
+    <TextView
+      android:id="@+id/spotTime"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginStart="25dp"
+      android:layout_marginTop="24dp"
+      android:drawablePadding="13dp"
+      android:drawableStart="@drawable/ic_time"
+      android:textColor="@color/black"
+      android:textSize="12sp"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@id/spotAddress"
+      tools:text="매일 10:00 ~ 23:00" />
+
+    <TextView
+      android:id="@+id/spotTel"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginStart="25dp"
+      android:layout_marginTop="24dp"
+      android:drawablePadding="13dp"
+      android:drawableStart="@drawable/ic_tel"
+      android:textColor="@color/black"
+      android:textSize="12sp"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@id/spotTime"
+      tools:text="02-000-0000" />
+
+    <TextView
+      android:id="@+id/spotHomepage"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginStart="25dp"
+      android:layout_marginTop="24dp"
+      android:drawablePadding="13dp"
+      android:drawableStart="@drawable/ic_home_page"
+      android:textColor="@color/colorPrimary"
+      android:textSize="12sp"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@id/spotTel"
+      tools:text="https://www.seoultower.co.kr/" />
+
+    <View
+      android:id="@+id/infoDivider"
+      android:layout_width="0dp"
+      android:layout_height="1dp"
+      android:layout_marginEnd="10dp"
+      android:layout_marginStart="10dp"
+      android:layout_marginTop="21dp"
+      android:background="#e4e4e4"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@id/spotHomepage" />
+
+    <TextView
+      android:id="@+id/starDescription"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginStart="23dp"
+      android:layout_marginTop="17dp"
+      android:text="@string/spot_detail_star_description"
+      android:textColor="@color/black"
+      android:textSize="12sp"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="@id/infoDivider" />
+
+    <LinearLayout
+      android:id="@+id/spotStarContainer"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginStart="23dp"
+      android:layout_marginTop="15dp"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@id/starDescription">
+
+      <ImageView
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:src="@drawable/ic_empty_star_1" />
+
+      <ImageView
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:src="@drawable/ic_empty_star_1" />
+
+      <ImageView
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:src="@drawable/ic_empty_star_1" />
+
+      <ImageView
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:src="@drawable/ic_empty_star_1" />
+
+      <ImageView
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:src="@drawable/ic_empty_star_1" />
+
+    </LinearLayout>
+
+    <TextView
+      android:id="@+id/spotReview"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginStart="23dp"
+      android:layout_marginTop="17dp"
+      android:text="@string/review"
+      android:textColor="@color/black"
+      android:textSize="12sp"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@id/spotStarContainer" />
+
+    <androidx.recyclerview.widget.RecyclerView
+      android:layout_width="match_parent"
+      android:layout_height="0dp"
+      android:layout_marginEnd="23dp"
+      android:layout_marginStart="23dp"
+      android:layout_marginTop="3dp"
+      app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@id/spotReview"
+      tools:listitem="@layout/item_spot_review" />
+
+  </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

@@ -102,7 +102,8 @@ public class Log {
 
     public static void logNetworkError(String id, Throwable tr) {
         android.util.Log.w(TAG, "id: " + id + " / " + tr.getMessage(), tr);
-        if (!BuildEnv.DEBUG || BasePreference.isFabricLogChecked()) {
+        //if (!BuildEnv.DEBUG || BasePreference.isFabricLogChecked()) {
+        if (!BuildEnv.DEBUG) {
             CrashHelper.log(android.util.Log.ERROR, "NETWORK_ERROR", id, tr);
         }
     }

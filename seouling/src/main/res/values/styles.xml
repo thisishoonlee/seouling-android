@@ -16,15 +16,30 @@
         <item name="android:textColor">@color/white</item>
     </style>
 
+    <style name="Widget.Base.FloatingActionButton" parent="android:Widget">
+        <item name="fabSize">normal</item>
+        <item name="backgroundTint">@color/red</item>
+        <item name="rippleColor">@color/ripple_material_dark</item>
+        <item name="elevation">@dimen/design_fab_elevation</item>
+        <item name="pressedTranslationZ">@dimen/design_fab_translation_z_pressed</item>
+        <item name="borderWidth">@dimen/design_fab_border_width</item>
+    </style>
+
     <style name="Base.TextAppearance.Widget.Base.Toolbar.Title" parent="TextAppearance.Widget.AppCompat.Toolbar.Title">
         <item name="android:textSize">18sp</item>
         <item name="android:textColor">@color/black</item>
         <item name="android:textStyle">normal</item>
+        <item name="android:textAlignment">center</item>
+        <item name="android:layout_gravity">center</item>
     </style>
 
     <style name="TextAppearance.Widget.Base.Toolbar.Title" parent="Base.TextAppearance.Widget.Base.Toolbar.Title" />
 
     <style name="BaseProject" parent="Base" />
+    <style name="Theme.Base.SplashScreen" parent="Theme.AppCompat.NoActionBar">
+        <item name="android:windowBackground">@drawable/seouling_splash</item>
+        <item name="android:windowTranslucentStatus">true</item>
+    </style>
 
     <style name="Base" parent="Theme.AppCompat.Light.NoActionBar">
         <!--<item name="android:popupMenuStyle">@style/VinglePopupMenu</item>-->

@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  android:orientation="vertical">
+
+  <LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <mobile.seouling.com.widget.BaseToolbar
+      android:layout_width="match_parent"
+      android:layout_height="?attr/actionBarSize"
+      app:navigationIcon="@drawable/ic_back"
+      app:title="계획 짜기"
+      app:titleTextAppearance="@style/Base.TextAppearance.Widget.Base.Toolbar.Title" />
+
+    <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:background="@color/grey"
+      android:orientation="horizontal">
+
+      <ImageView
+        android:layout_width="22dp"
+        android:layout_height="28dp"
+        android:layout_marginBottom="11dp"
+        android:layout_marginStart="23dp"
+        android:layout_marginTop="11dp"
+        android:src="@drawable/ic_search_spot" />
+
+      <EditText
+        android:layout_width="match_parent"
+        android:layout_height="33dp"
+        android:layout_marginEnd="23dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/bg_round_edit" />
+
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+      android:id="@+id/planRecycler"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:layout_marginEnd="20dp"
+      android:layout_marginStart="20dp"
+      android:layout_marginTop="10dp"
+      android:orientation="vertical"
+      app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+      tools:listitem="@layout/item_search_spot" />
+
+  </LinearLayout>
+
+  <TextView
+    android:id="@+id/spotEditComplete"
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    android:layout_gravity="bottom"
+    android:background="@color/colorPrimary"
+    android:gravity="center"
+    android:text="@string/complete"
+    android:textColor="@color/white"
+    android:textSize="16sp"
+    android:textStyle="bold" />
+
+</FrameLayout>

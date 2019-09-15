@@ -5,7 +5,7 @@ import io.reactivex.Completable
 import io.reactivex.disposables.Disposable
 import io.reactivex.schedulers.Schedulers
 import mobile.seouling.com.BuildEnv
-import mobile.seouling.com.MainActivity
+import mobile.seouling.com.application.main.MainActivity
 import mobile.seouling.com.framework.Log
 import mobile.seouling.com.framework.ThreadHelper
 import mobile.seouling.com.framework.helper.FormatHelper

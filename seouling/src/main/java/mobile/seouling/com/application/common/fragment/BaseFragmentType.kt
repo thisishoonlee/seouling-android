@@ -3,17 +3,17 @@ package mobile.seouling.com.application.common.fragment
 import android.os.Bundle
 import androidx.annotation.NonNull
 import androidx.fragment.app.Fragment
-import mobile.seouling.com.application.home.HomeFragment
+import mobile.seouling.com.application.home.HomeFrameFragment
+import mobile.seouling.com.application.plan.PlanDetailFragment
+import mobile.seouling.com.application.sign.LoginFragment
+import mobile.seouling.com.application.sign.SignUpFragment
 
-enum class BaseFragmentType private constructor(private val mFragmentClass: Class<out BaseFragment>) {
+enum class BaseFragmentType constructor(private val mFragmentClass: Class<out BaseFragment>) {
 
-    HOME(HomeFragment::class.java);
-//
-//    SIGN_UP_CALL(SignUpCallFragment::class.java),
-//    SIGN_UP_VERIFY_CALL(SignUpVerifyCallFragment::class.java),
-//    SIGN_UP_FIRST_PROFILE(SignUpFirstProfileFragment::class.java),
-//    SIGN_UP_SECOND_PROFILE(SignUpSecondProfileFragment::class.java),
-//    SIGN_UP_UPLOAD_PROFILE(SignUpUploadProfileFragment::class.java);
+    HOME(HomeFrameFragment::class.java),
+    LOGIN(LoginFragment::class.java),
+    SIGN_UP(SignUpFragment::class.java),
+    PLAN_DETAIL(PlanDetailFragment::class.java);
 
     /**
      * Instantiates a VingleFragment with a given arguments
@@ -23,8 +23,8 @@ enum class BaseFragmentType private constructor(private val mFragmentClass: Clas
     fun createFragment(args: Bundle?, extraArgs: Map<String, Any>?): BaseFragment {
         try {
             val f = mFragmentClass.newInstance()
-            f.setArguments(args)
-            f.setExtraArguments(extraArgs)
+            f.arguments = args
+            f.extraArguments = extraArgs
             return f
         } catch (e: InstantiationException) {
             e.printStackTrace()
@@ -40,11 +40,11 @@ enum class BaseFragmentType private constructor(private val mFragmentClass: Clas
         /**
          * Gets the FragmentType for the specified Fragment
          */
-        fun getType(mallangFrag: Fragment?): BaseFragmentType? {
-            if (mallangFrag == null) {
+        fun getType(fragment: Fragment?): BaseFragmentType? {
+            if (fragment == null) {
                 return null
             }
-            val cls = mallangFrag.javaClass
+            val cls = fragment.javaClass
             for (type in BaseFragmentType.values()) {
                 if (cls == type.mFragmentClass) {
                     return type

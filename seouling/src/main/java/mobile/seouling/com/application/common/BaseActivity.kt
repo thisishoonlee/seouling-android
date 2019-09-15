@@ -33,7 +33,7 @@ import java.util.ArrayList
 abstract class BaseActivity : RxActivity() {
 
     companion object {
-        protected const val TAG: String = "MallangBaseActivity"
+        protected const val TAG: String = "BaseActivity"
     }
 
     private val eventDispatchers = mutableListOf<EventDispatcher>()

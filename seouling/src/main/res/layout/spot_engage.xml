@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  android:orientation="horizontal"
+  android:gravity="center_vertical">
+
+  <CheckedTextView
+    android:layout_width="15dp"
+    android:layout_height="15dp"
+    android:background="@drawable/ic_heart"
+    tools:checked="true" />
+
+  <TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="@string/good"
+    android:textColor="@color/tag_text"
+    android:layout_marginStart="7dp"
+    android:textSize="12sp" />
+
+  <TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:textColor="@color/tag_text"
+    android:layout_marginStart="4dp"
+    tools:text="14"
+    android:textSize="12sp" />
+
+  <CheckedTextView
+    android:layout_width="15dp"
+    android:layout_height="15dp"
+    android:background="@drawable/ic_my_seoul"
+    tools:checked="false"
+    android:layout_marginStart="30dp" />
+
+  <TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="@string/my_seoul"
+    android:textColor="@color/tag_text"
+    android:layout_marginStart="7dp"
+    android:textSize="12sp" />
+
+  <TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:textColor="@color/tag_text"
+    android:layout_marginStart="4dp"
+    tools:text="13"
+    android:textSize="12sp" />
+
+</LinearLayout>

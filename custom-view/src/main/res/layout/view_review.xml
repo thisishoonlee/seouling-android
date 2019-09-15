@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  tools:background="@color/white"
+  tools:parentTag="androidx.constraintlayout.widget.ConstraintLayout">
+
+  <ImageView
+    android:id="@+id/userProfile"
+    android:layout_width="33dp"
+    android:layout_height="33dp"
+    android:scaleType="centerCrop"
+    android:src="@drawable/ic_round_profile"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent" />
+
+  <LinearLayout
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="11dp"
+    android:orientation="vertical"
+    app:layout_constraintStart_toEndOf="@id/userProfile"
+    app:layout_constraintTop_toTopOf="@id/userProfile">
+
+    <TextView
+      android:id="@+id/username"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:textColor="#000000"
+      android:textSize="12sp"
+      tools:text="서울토박이" />
+
+    <LinearLayout
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="5dp">
+
+      <ImageView
+        android:id="@+id/star1"
+        android:layout_width="14dp"
+        android:layout_height="14dp"
+        tools:src="@drawable/ic_star_n"/>
+
+      <ImageView
+        android:id="@+id/star2"
+        android:layout_width="14dp"
+        android:layout_height="14dp"
+        tools:src="@drawable/ic_star_n" />
+
+      <ImageView
+        android:id="@+id/star3"
+        android:layout_width="14dp"
+        android:layout_height="14dp"
+        tools:src="@drawable/ic_star_n" />
+
+      <ImageView
+        android:id="@+id/star4"
+        android:layout_width="14dp"
+        android:layout_height="14dp"
+        tools:src="@drawable/ic_star_n" />
+
+      <ImageView
+        android:id="@+id/star5"
+        android:layout_width="14dp"
+        android:layout_height="14dp"
+        tools:src="@drawable/ic_star_n" />
+
+    </LinearLayout>
+
+  </LinearLayout>
+
+  <TextView
+    android:id="@+id/userReview"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="15dp"
+    android:textColor="#000000"
+    android:textSize="12sp"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@id/userProfile"
+    tools:text="너무 좋아요!!" />
+
+  <View
+    android:layout_width="match_parent"
+    android:layout_height="2dp"
+    android:layout_marginTop="21dp"
+    android:background="#f6f6f6"
+    app:layout_constraintTop_toBottomOf="@id/userReview" />
+
+</merge>
